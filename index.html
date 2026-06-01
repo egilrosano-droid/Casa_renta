@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Casa en Renta - Puebla | Eduardo Gil</title>
+    <meta property="og:title" content="Casa en Renta en Puebla - $15,000 MXN/mes">
+    <meta property="og:description" content="Casa amplia con 3 recámaras, patio jardín, estudio y garage. Visitas sábados previa cita.">
+    <meta property="og:image" content="imagenes/patio_jardin.jpg">
+    <meta property="og:url" content="https://egilrosano-droid.github.io/Casa_renta/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Casa en Renta - Puebla">
+    <meta name="twitter:description" content="3 recámaras, patio jardín, estudio. $15,000 MXN/mes">
+    <meta name="twitter:image" content="imagenes/patio_jardin.jpg">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: Arial, sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 20px 0; }
@@ -11,6 +20,9 @@
         .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px; text-align: center; }
         .header h1 { margin: 0; font-size: 28px; }
         .header p { margin: 5px 0; opacity: 0.9; }
+        .header .address { font-size: 14px; margin: 10px 0 0 0; opacity: 0.9; }
+        .header .address a { color: #ffd700; text-decoration: none; }
+        .header .address a:hover { text-decoration: underline; }
         .price { font-size: 32px; font-weight: bold; margin: 15px 0 0 0; }
         
         .carousel { position: relative; width: 100%; height: 350px; background: #f0f0f0; overflow: hidden; }
@@ -37,6 +49,7 @@
         .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
         .item { background: #f9f9f9; padding: 12px; border-radius: 6px; border-left: 4px solid #667eea; font-size: 14px; }
         .highlight { background: #f0f4ff; padding: 15px; border-radius: 6px; border-left: 4px solid #667eea; margin: 15px 0; }
+        .highlight .price-moved { display: block; margin-top: 10px; font-size: 20px; color: #667eea; }
         .btn { display: block; background: #25D366; color: white; padding: 15px; text-align: center; border-radius: 8px; text-decoration: none; margin: 20px 0; font-weight: bold; font-size: 16px; }
         .btn:hover { background: #20BA5A; }
         .footer { background: #f8f9fa; padding: 15px; text-align: center; color: #666; font-size: 12px; border-top: 1px solid #eee; }
@@ -47,7 +60,11 @@
         <div class="header">
             <h1>🏡 Casa en Renta</h1>
             <p>Puebla, Mexico</p>
-            <div class="price">$15,000 MXN/mes</div>
+            <p class="address">
+                Priv. 3-A-Sur 2303, Col. El Ingeniero (El Carmen)<br>
+                CP 72423, Puebla, Pue.
+                <a href="https://maps.google.com/?q=Priv.+3-A-Sur+2303+El+Ingeniero+Puebla" target="_blank">📍 Ver en Google Maps</a>
+            </p>
         </div>
         
         <div class="carousel">
@@ -149,13 +166,16 @@
             </div>
             
             <div class="highlight">
-                <strong>📅 Visitas:</strong> Sabados previa cita<br><strong>📞 Contacto:</strong> Eduardo Gil
+                <strong>📅 Visitas:</strong> Sabados previa cita<br>
+                <strong>📞 Contacto:</strong> Eduardo Gil<br>
+                <strong class="price-moved">💰 $15,000.00 MXN/mes</strong>
             </div>
             
-            <a href="https://wa.me/525540273270?text=Hola%20Eduardo%2C%20me%20interesa%20la%20casa%20en%20renta%20en%20Puebla.%20Quiero%20conocer%20mas%20detalles%20y%20agendar%20una%20visita." class="btn">📱 CONTACTAR POR WHATSAPP</a>
+            <a href="https://wa.me/525540273270?text=Hola%20Eduardo%2C%20me%20interesa%20la%20casa%20en%20renta%20en%20Puebla.%20Quiero%20conocer%20mas%20detalles%20y%20agendar%20una%20visita." class="btn">� CONTACTAR POR WHATSAPP</a>
         </div>
         <div class="footer">
-            © 2026 Casa en Renta - Puebla | Eduardo Gil
+            © 2026 Casa en Renta - Puebla | Eduardo Gil<br>
+            <small>Priv. 3-A-Sur 2303, Col. El Ingeniero, CP 72423</small>
         </div>
     </div>
 
@@ -163,7 +183,7 @@
         let currentIndex = 0;
         const slides = document.querySelectorAll('.carousel-image');
         const dots = document.querySelectorAll('.dot');
-        const autoplayInterval = 5000;
+        const autoplayInterval = 10000;
         
         function showSlide(index) {
             slides.forEach(slide => slide.classList.remove('active'));
